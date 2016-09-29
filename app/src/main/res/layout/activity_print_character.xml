@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="5dp"
+    android:paddingBottom="0px" android:background="@mipmap/mainpage"
+    android:id="@+id/rootRL"
+    tools:context="com.example.apps4kids.printlikeaproapp.PrintCharacterActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout">
+        <TextView android:text="Hello World" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:id="@+id/textView"
+            android:gravity="top"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id = "@+id/lines">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="10px"
+            android:id="@+id/upline"
+            android:layout_alignParentTop="true"
+            android:src = "@mipmap/solidline"
+            android:scaleType="centerCrop">
+            </ImageView>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="10px"
+            android:id="@+id/middleline"
+            android:layout_below="@id/upline"
+            android:layout_marginTop="140px"
+            android:src = "@mipmap/dotline"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="10px"
+            android:id="@+id/bottomline"
+            android:layout_below="@id/middleline"
+            android:layout_marginTop="140px"
+            android:src = "@mipmap/solidline"
+            android:scaleType="centerCrop">
+        </ImageView>
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="600dp"
+        android:layout_height="40dp"
+        android:id="@+id/controlpanel"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:onClick="backChar"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonBackChar"
+            android:textSize = "20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/backchar"
+            android:textColor="@drawable/button_text_selector"/>
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:onClick="goPrevious"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonBackState"
+            android:textSize = "20dp"
+            android:layout_toRightOf="@id/buttonBackChar"
+            android:background="@drawable/back"
+            android:textColor="@drawable/button_text_selector"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@id/buttonBackState"
+            android:onClick="Modelling"
+            android:id="@+id/showUs"
+            android:textSize = "20dp"
+            android:background="@drawable/watch2"
+            android:textColor="@drawable/button_text_selector"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:id="@+id/neststatebutton"
+            android:textSize = "20dp"
+            android:layout_toRightOf="@id/showUs"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/forward"
+            android:textColor="@drawable/button_text_selector"
+            />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/neststatebutton"
+        android:id="@+id/nextcharbutton"
+        android:onClick="nextChar"
+        android:textSize = "20dp"
+        android:background="@drawable/nextchar"
+        android:textColor="@drawable/button_text_selector"/>
+    </RelativeLayout>
+</RelativeLayout>
